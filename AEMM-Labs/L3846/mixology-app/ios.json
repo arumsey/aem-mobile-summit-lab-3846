@@ -1,0 +1,45 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Sync\"><param name=\"ios-package\" value=\"ContentSync\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Zip\"><param name=\"ios-package\" value=\"ContentSync\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "phonegap-plugin-contentsync": {
+            "PACKAGE_NAME": "com.adobesummit.mixology"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "phonegap-plugin-contentsync.ContentSync",
+            "file": "plugins/phonegap-plugin-contentsync/www/index.js",
+            "pluginId": "phonegap-plugin-contentsync",
+            "clobbers": [
+                "window.ContentSync",
+                "window.Zip",
+                "window.zip"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "phonegap-plugin-contentsync": "1.3.3"
+    }
+}

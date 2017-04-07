@@ -1,0 +1,21 @@
+<ion-view view-title="Collections">
+    <ion-content>
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="refreshCollectionsList()">
+        </ion-refresher>
+        <h4 class="missingContentMessage" ng-if="missingContentMessage">
+            {{missingContentMessage}}
+        </h4>
+        <ion-list>
+            <ion-item ng-repeat="collection in collections" type="item-text-wrap" href="#/tab/collections/{{collection.name}}">
+                <h2>
+                    {{collection.title}}
+                </h2>
+                <p>
+                    {{collection.description}}
+                </p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
