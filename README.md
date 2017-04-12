@@ -13,6 +13,15 @@ This repository contains all the required content for completing the lab on your
 - Open the [Workbook](./AEMM-Labs/L3846/workbook/L3846_workbook.pdf) (PDF)
 - Follow exercises in the workbook to complete lab goals
 
+### Enable Content Services in AEM 6.3
+
+The Content Service features introduced in this lab are disabled by default in AEM 6.3. The features can be enabled via a feature flag however so that they can be evaluated.
+
+- Go to: [AEM Web Console](http://localhost:4502/system/console/configMgr)
+- Search for: `AEM Content Services Feature Flag`
+- Check: `Enable AEM Content Services`
+- Save
+
 ## Modules
 
 This lab consists of the folowing six modules.
